@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ryan - Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="animate-things.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container navbar">
+            <header>
+                <div class="logo">
+                    <h1>Ryan</h1>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#work">my work</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="container main-info-section">
+            <div class="text">
+                <h1>
+                    <!--Hi, I'm Ryan,-->
+                    <span>H</span>
+                    <span class="m-left">i</span>
+                    <span class="m-left">,</span>
+                    <br>
+                    <span>I</span>
+                    <span class="m-left">'</span>
+                    <span class="m-left">m</span>
+                    <span class="name">R</span>
+                    <span class="m-left name">y</span>
+                    <span class="m-left name">a</span>
+                    <span class="m-left name">n</span>
+                    <span class="m-left">,</span>
+                    <br>
+                    <!--Cybersecurity Student-->
+                    <span>C</span>
+                    <span class="m-left">y</span>
+                    <span class="m-left">b</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">r</span>
+                    <span class="m-left">s</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">c</span>
+                    <span class="m-left">u</span>
+                    <span class="m-left">r</span>
+                    <span class="m-left">i</span>
+                    <span class="m-left">t</span>
+                    <span class="m-left">y</span>
+                    <span>S</span>
+                    <span class="m-left">t</span>
+                    <span class="m-left">u</span>
+                    <span class="m-left">d</span>
+                    <span class="m-left">e</span>
+                    <span class="m-left">n</span>
+                    <span class="m-left">t</span>
+                </h1>
+                <p>Made with: CSS / Javascript / Ajax <br>(mouse over the letters)</p>
+                <a href="#contact">contact me</a>
+            </div>
+            <div class="profile-image">
+                <img src="pics/profile-image.png" alt="">
+            </div>
+        </div>
+
+        <div class="container about" id = "about">
+            <h1>About</h1>
+            <div class="about-me-info">
+                <p>Hey there! I'm Ryan. </p>
+                <p>
+                    I had a ton of fun in this Web Development class and learned a lot. Prior to this class, I was terrified (and slightly disgusted) by Javascript
+                    because of how complex and non user-friendly it can be (despite one of its main goals being to enhance user experience).
+                </p>
+                <p>Feel free to tell me some of your favorite aspects of this class for yourself in the Contact form below! I hope that you learned as much as I did and will
+                    be able to use the skills you've learned in your career and life as I have.
+                </p>
+            </div>
+            <img src="pics/dotted-box.png" alt="">
+        </div>
+
+        <div class="container skills" id="skills">
+            <h1>Skills</h1>
+            <p class="skills-info">
+                Fortunately, I have come into Fox with a good understanding of HTML/CSS, but this class has allowed me to
+                gain a better grasp on all things web-development. In addition to these things, I have learned Python and am currently 
+                learning Java (and will continue to in Data Structures, etc.).
+            </p>
+            <div class="html">
+                <div class="tag-html">
+                    <p>HTML</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-html"></div>
+                </div>
+            </div>
+            <div class="html">
+                <div class="tag-css">
+                    <p>CSS</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-css"></div>
+                </div>
+            </div>
+            <div class="html">
+                <div class="tag-javascript">
+                    <p>JS</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-javascript"></div>
+                </div>
+            </div>
+            <div class="html">
+                <div class="tag-java">
+                    <p>Java</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-java"></div>
+                </div>
+            </div>
+            <div class="html">
+                <div class="tag-python">
+                    <p>Python</p>
+                </div>
+                <div class="progressbar">
+                    <div class="bar-python"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container work" id="work">
+            <h1>Work</h1>
+            <div class="work-category">
+                <button id = "designing" class = "active" onclick="showRequiredCategory(this)">Web Designing</button>
+                <button id = "animation" onclick="showRequiredCategory(this)">Web Animation</button>
+                <button id = "project" onclick="showRequiredCategory(this)">Java Projects</button>
+            </div>
+            <div class="category-designing showCategory">
+                <a href = "https://rwittmers19.github.io/csszengarden/" target = "_blank"><img src="pics/1.png"></a>
+                <a href = "https://rwittmers19.github.io/PersonalProject/" target = "_blank"><img src="pics/2.png"></a>
+                <a href = "https://rwittmers19.github.io/" target = "_blank"><img src="pics/3.png"></a>
+
+            </div>
+            <div class="category-animation hideCategory">
+                <a href = "https://rwittmers19.github.io/PersonalProject/" target = "_blank"><img src="pics/2.png"></a>
+                <a href = "https://rwittmers19.github.io/" target = "_blank"><img src="pics/3.png"></a>
+            </div>
+            <div class="category-project hideCategory">
+                <div class="coming-soon">
+                    <h2>Coming soon! I haven't done anything in Java with a GUI 
+                        yet so there's not much to take a screenshot of. :)</h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="container contact" id="contact">
+            <h1>Contact Me</h1>
+            <form>
+                <input type="text" name = "name" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" id = "submit-btn">
+            </form>
+        </div>
+
+        <footer>
+            <hr>
+            <p>2020 Copyright &copy; All Rights Reserved</p>
+        </footer>
+
+
+
+    <!--Script files for the animations-->
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/animation.gsap.min.js"></script>
+    <script src="js/TimelineLite.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </body>
+</html>
