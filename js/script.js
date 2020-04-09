@@ -40,7 +40,7 @@ const scene = new ScrollMagic.Scene({
 })
 
 // Adds the "clock" to the bars
-.setTween(time1)
+.setTween(barTimer)
 .addTo(controller)
 
 // Shows pertinent image links when certain buttons are clicked (a filtering effect)
