@@ -36,7 +36,7 @@ barTimer.fromTo(pythonBar, .75, {width: `calc(0% - 6px)`},
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
     triggerElement: '.skills',
-    triggerHook: 0
+    triggerHook: .01
 })
 
 // Adds the "clock" to the bars
