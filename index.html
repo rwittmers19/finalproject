@@ -166,11 +166,24 @@
         </div>
         <div class="container contact" id="contact">
             <h1>Contact Me</h1>
-            <form>
-                <input type="text" name = "name" placeholder="Full Name">
-                <input type="email" placeholder="Email">
-                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-                <input type="submit" id = "submit-btn">
+            <div class="message">
+                <p>This form works!</p>
+                <p>If you want, tell me what your favorite part of the semester was and 
+                    I'll respond to as many of you as I can!</p>
+            </div>
+            <form id="my-form" action="https://formspree.io/xbjaaojw" method="POST">
+                <input type="text" name = "name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder = "Email" required/>
+                <input type="text" cols = "30" rows = "10" name="message" placeholder = "Message" required/>
+                <input type="submit" id = "my-form-button">
+                <!--CSS file wasn't doing anything to this, so inline it is!-->
+                <p id="my-form-status" style = "
+                    color: #707070; 
+                    text-align: center;
+                    font-size: 5rem;
+                    font-family: 'Montserrat', sans-serif;
+                "></p>
+
             </form>
         </div>
 
@@ -188,6 +201,7 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="js/CSSPlugin.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </script>
     </body>
 </html>
