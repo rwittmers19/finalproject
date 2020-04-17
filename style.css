@@ -9,9 +9,28 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Change scrollbar to be a gradient*/
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background:  linear-gradient(0deg, #48cfad 0%, #ED5565 100%);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0px 0px 0px 100000vh black;
+}
+
 .container {
     padding: 0 100px 0 100px;
 }
+
+::selection {
+    background: rgba(237, 85, 100, 0.63);
+    color: white;
+  }
 
 nav ul,
 .main-info-section,
@@ -20,6 +39,19 @@ nav ul,
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.container {
+    position: relative;
+    
+}
+
+/* #cornify {
+    text-align: center;
+    margin: 0 20px 0 20px;
+    width: calc(50% + 2vw);
+    height: calc(50% + 2vh);
+    right: 50%;
+    transform: translateX(25%);
+} */
 
 body {
     background-color: #252627;
@@ -82,7 +114,7 @@ a {
 
 .text h1 {
     color: white;
-    font-size: 3rem;
+    font-size: calc(100% + 1.5vw + 1.5vh);
     cursor: context-menu;
 }
 
@@ -144,7 +176,8 @@ span.m-left {
 }
 
 .profile-image img {
-    width: 400px;
+    width: auto;
+    height: 400px;
     margin-top: 50px;
     box-shadow: 0 0 8px 8px #252627 inset;
 }
@@ -265,6 +298,59 @@ div[class^='bar-'] {
     width: calc(0 - 6px);
 }
 
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.weather-h1 {
+    text-align: left;
+    font-size: 10rem;
+    opacity: 0.1;
+    color: #707070;
+}
+
+.weather-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+
+.weather-header input {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #ED5565;
+
+    color: #313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition: 0.2s ease-out;
+}
+
+.weather-header input:focus {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+main {
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.weather-header input::placeholder {
+    color: #181818;
+}
+
 .work-category button {
     text-transform: capitalize;
     border: 3px solid #ED5565;
@@ -349,6 +435,18 @@ form input:focus
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
 
+}
+
+.submit-button {
+    background: transparent;
+}
+
+.submit-button:hover {
+    background-color: #ED5565;
+    padding: auto;
+    border: #ED5565;
+    transition: .5s;
+    cursor: pointer;
 }
 
 footer hr {
