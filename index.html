@@ -10,14 +10,21 @@
         <link rel="stylesheet" href="style.css"/>
         <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
     </head>
     <body>
         <div class="container navbar">
             <header>
                 <div class="logo">
-                    <h1>Ryan</h1>
+                    <h1>Ryan Wittmers</h1>
                 </div>
-
+                <!-- <div class="cornify" style = "top: -30px;">
+                    <a href="http://www.cornify.com" onclick="cornify_add();return false;" title="Cornify">
+                        <img src="pics/cornify.png" width="150" height="50" border="0" alt="Cornify" id = "cornify"/>
+                    </a>
+                </div> -->
+                
                 <nav>
                     <ul>
                         <li><a href="#about">about me</a></li>
@@ -71,17 +78,18 @@
                 <a href="#contact">contact me</a>
             </div>
             <div class="profile-image">
-                <img src="pics/profile-image.png" alt="">
+                <img src="pics/profile-image.png" class = "img-fluid" alt="">
             </div>
         </div>
 
         <div class="container about" id = "about">
             <h1>About</h1>
             <div class="about-me-info">
-                <p>Hey there! I'm Ryan. </p>
+                <p>I had a ton of fun in this Web Development class and learned a lot. Prior to this class, I was terrified (and slightly disgusted) by Javascript
+                    because of how complex and non user-friendly it can be (despite one of its main goals being to enhance user experience). </p>
                 <p>
-                    I had a ton of fun in this Web Development class and learned a lot. Prior to this class, I was terrified (and slightly disgusted) by Javascript
-                    because of how complex and non user-friendly it can be (despite one of its main goals being to enhance user experience).
+                    Despite this, I have found Javascript and all of its entities to be very interesting and powerful. It's how I was able to create
+                    cool things like the "elastic" text above as well as a working contact form!
                 </p>
                 <p>Feel free to tell me some of your favorite aspects of this class for yourself in the Contact form below! I hope that you learned as much as I did and will
                     be able to use the skills you've learned in your career and life as I have.
@@ -138,6 +146,25 @@
                 </div>
             </div>
         </div>
+        <div class="container weather">
+            <h1 class = "weather-h1">Weather</h1>
+            <div class="app-wrap">
+                <header class = "weather-header">
+                    <input type="text" autocomplete="off" class = "search-box" placeholder="Search for a city...">
+                </header>
+                <main>
+                    <section class="location">
+                        <div class="city">Newberg, OR</div>
+                        <div class="date">Friday 17 April 2020</div>
+                        <div class="current">
+                            <div class="temp">60<span>°F</span></div>
+                            <div class="weather">Sunny</div>
+                            <div class="hi-low">75°F / 50°F</div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
 
         <div class="container work" id="work">
             <h1>Work</h1>
@@ -161,21 +188,21 @@
                     <h2>Coming soon! I haven't done anything in Java with a GUI 
                         yet so there's not much to take a screenshot of. :)</h2>
                 </div>
-
             </div>
         </div>
         <div class="container contact" id="contact">
-            <h1>Contact Me</h1>
+            <h1 style = "margin-top: 415px">Contact Me</h1>
             <div class="message">
                 <p>This form works!</p>
                 <p>If you want, tell me what your favorite part of the semester was and 
                     I'll respond to as many of you as I can!</p>
             </div>
+            <!--Working form that uses free form service FormSpree-->
             <form id="my-form" action="https://formspree.io/xbjaaojw" method="POST">
                 <input type="text" name = "name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder = "Email" required/>
                 <input type="text" cols = "30" rows = "10" name="message" placeholder = "Message" required/>
-                <input type="submit" id = "my-form-button">
+                <input type="submit" id = "my-form-button" class = "submit-button">
                 <!--CSS file wasn't doing anything to this, so inline it is!-->
                 <p id="my-form-status" style = "
                     color: #707070; 
@@ -189,7 +216,7 @@
 
         <footer>
             <hr>
-            <p>2020 Copyright &copy; All Rights Reserved</p>
+            <p>2020 Copyright &copy; Ryan Wittmers All Rights Reserved</p>
         </footer>
 
 
@@ -201,7 +228,6 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="js/CSSPlugin.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </script>
     </body>
 </html>
