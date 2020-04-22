@@ -19,7 +19,9 @@
                 <div class="logo">
                     <h1>Ryan Wittmers</h1>
                 </div>
-                
+                <div class="menuBarTogller" style="display: none; "> <span></span>
+                <span></span>
+                <span></span></div>
                 <nav>
                     <ul>
                         <li><a href="#about">about me</a></li>
@@ -143,8 +145,9 @@
             </div>
         </div>
         <div class="container weather" id = "weather">
-            <h1 class = "weather-h1">Weather</h1>
+            
             <div class="app-wrap">
+                <h1 class = "weather-h1">Weather</h1>
                 <header class = "weather-header">
                     <input type="text" autocomplete="off" class = "search-box" placeholder="Search for a city...">
                 </header>
@@ -224,6 +227,11 @@
     <script src="js/TweenMax.min.js"></script>
     <script src="js/CSSPlugin.min.js"></script>
     <script src="js/script.js"></script>
-    </script>
+    <script type="text/javascript"> 
+		$(".menuBarTogller").click(function(){
+			$(this).toggleClass("active");
+			$(".navbar header nav").toggleClass("active");
+		});
+	</script>
     </body>
 </html>

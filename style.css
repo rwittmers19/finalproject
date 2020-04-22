@@ -44,15 +44,6 @@ nav ul,
     
 }
 
-/* #cornify {
-    text-align: center;
-    margin: 0 20px 0 20px;
-    width: calc(50% + 2vw);
-    height: calc(50% + 2vh);
-    right: 50%;
-    transform: translateX(25%);
-} */
-
 body {
     background-color: #252627;
 }
@@ -66,6 +57,7 @@ header {
 
 .navbar {
     background-color: #181818;
+    width: 100%;
 }
 
 header h1,
@@ -74,12 +66,14 @@ header a,
 .about h1,
 .skills h1,
 .work h1,
-.contact h1 {
+.contact h1,
+.weather h1 {
     color: #707070;
 }
 
 .coming-soon h2{
     display: grid;
+    justify-self: center;
     max-width: 900px;
     background-color: #252627;
     box-shadow: 0 0 1.2rem rgba(0, 0, 0, .35);
@@ -194,8 +188,19 @@ span.m-left {
     opacity: .1;
 }
 
+@media screen and (min-width: 300px) {
+    .about h1,
+    .work h1,
+    .skills h1,
+    .weather-h1 {
+        padding-top: 50px;
+        font-size: 8rem;
+    }
+}
+
 .about-me-info {
     width: 85%;
+    min-width: 300px;
     background-color: #252627;
     box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
     padding: 50px;
@@ -208,7 +213,7 @@ span.m-left {
 }
 
 .about-me-info p {
-    font-size: 1.75vw;
+    font-size: 1rem;
     color: #BEBEBE;
 }
 
@@ -299,12 +304,13 @@ div[class^='bar-'] {
 }
 
 .app-wrap {
+    padding-top: 500px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.weather-h1 {
+.app-wrap h1 {
     text-align: left;
     font-size: 10rem;
     opacity: 0.1;
@@ -498,4 +504,208 @@ footer p  {
     color: #707070;
     font-size: 1.2rem;
     padding: 30px 0;
+}
+
+
+@media all and (max-width: 1024px){
+	body {
+		overflow-x: hidden; 
+    }
+    
+	img, iframe, video , audio, input, textarea {
+        max-width: 100%;
+	}
+	
+	.container {
+		padding: 0 40px;
+    }
+    
+	.work, .about, .skills{
+		padding-top: 30px;
+		padding-bottom: 30px;
+    }
+    
+	.main-info-section {
+		height: initial;
+	}
+	.about {
+		height: initial;
+		margin-top: 50px;
+	}
+	.skills {
+		height: initial;
+	}
+	.app-wrap {
+		padding-top: 0;
+		height: initial;
+	}
+ 
+	div[class^="category-"] {
+			grid-template-columns: repeat(auto-fill, minmax(calc(33% - 20px), 1fr));
+			grid-gap: 10px;
+		}
+	.coming-soon h2 { 
+			padding: 10px;
+		}
+	.contact h1 {
+		    margin-top: 40px;
+	}
+	.skills h1, .contact h1 {
+		font-size: 8rem;
+	}
+	.about img {
+		top: auto;
+		bottom: 0 !important;
+		position: absolute;
+	}
+	.main-info-section .text , .main-info-section .profile-image {
+		width: 50%;
+	}
+	.text h1 {
+		font-size: 32px;
+	}
+	.progressbar {
+		width: calc(100% - 150px);
+		height: 20px;
+		max-width: 600px;
+	}
+	
+}
+
+@media all and (max-width: 767px){
+	
+	.navbar header nav {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: #111010;
+        float: none;
+        z-index: 9999;
+        width: 100%;
+        right: -100%;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    
+	.navbar header nav.active {
+		right: 0;
+		opacity: 1;
+	}
+	
+	.navbar header nav ul {
+		flex-wrap: wrap;
+	}
+	.navbar header nav li {
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	
+	.navbar header nav li a {
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid rgba(0,0,0,.5);
+	}
+	.menuBarTogller {
+		display: block !important;
+		height: 35px;
+		width: 35px;
+		padding-top: 5px;
+		overflow: hidden;
+		cursor: pointer;
+    }
+    
+	.menuBarTogller span {
+		height: 3px;
+		background: #fff;
+		margin: 5px 2px;
+		display: block;
+		width: 30px;
+		position: relative;
+		transition: 0.5s;
+		left: 0;
+	}
+	
+	.menuBarTogller.active span:first-child{
+		transform: skewY(45deg);
+		top: 8px;
+	}
+	.menuBarTogller.active span:nth-child(2){ 
+		left: 120%;
+	}
+	.menuBarTogller.active span:last-child{
+		transform: skewY(-45deg);
+		bottom: 8px;
+	}
+	.contact  h1 {
+		margin-top: 20px !important;
+	}
+	.main-info-section .text , .main-info-section .profile-image{
+		width:100%;
+	}
+	.profile-image img {
+		height: initial;
+	}
+	.main-info-section 	.text {
+		margin-top: 20px;
+	}
+	.main-info-section{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.about-me-info {
+		width: 95%;
+		padding: 30px;
+	}
+	.skills h1, .contact h1 ,
+	.app-wrap h1, .about h1, .work h1, .skills h1, .weather-h1 { 
+		font-size: 5rem;
+	}
+	div[class^="category-"] {
+		grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr)); 
+	}
+	.work-category button {
+		padding: 8px 15px;
+	}
+	.about-me-info {
+			top: -25px;
+		}
+	
+}
+
+@media all and (max-width: 500px){
+	.text h1 {
+		font-size: 30px;
+	}
+	.container {
+		padding: 0 20px;
+	}
+	.skills h1, .contact h1, .app-wrap h1, .about h1, .work h1, .skills h1, .weather-h1 {
+		font-size: 4rem;
+	}
+	.about-me-info {
+		padding: 20px;
+	}
+	div[class^="tag-"] {
+		width: 70px;
+		margin-right: 10px;
+	}
+	div[class^="tag-"] p {
+		font-size: 0.8rem;
+		line-height: 23px
+	}
+	.progressbar {
+		width: calc(100% - 80px);
+	}
+	.current .temp {
+		font-size: 50px;
+	}
+	.work-category button {
+		padding: 5px 10px;
+		letter-spacing: 0px;
+		font-size: 11px;
+		border-width: 1px;
+	}
 }
