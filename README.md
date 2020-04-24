@@ -9,3 +9,6 @@ Final Project for CS304 at GFU. Pretty happy with how it came out!
 
 04/22/2020
 - Added responsive layout to scale on smaller devices
+
+04/24/2020
+- Last minute addition of "Back to Top" button
