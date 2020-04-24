@@ -9,6 +9,67 @@ html {
     scroll-behavior: smooth;
 }
 
+#back-to-top {
+    display: none;
+    z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #707070;
+    color: #252627;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#back-to-top:hover, #back-to-top:focus {
+    background-color: #ED5565;
+    color: #FFF;
+}
+
+/* Button Animations*/
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+
+/* Zoom in*/
+
+@keyframes btnEntrance {
+    from {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: btnExit;
+}
+
+@keyframes btnExit {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+}
+
 /* Change scrollbar to be a gradient*/
 body::-webkit-scrollbar {
     width: 10px;
@@ -30,7 +91,7 @@ body::-webkit-scrollbar {
 ::selection {
     background: rgba(237, 85, 100, 0.63);
     color: white;
-  }
+}
 
 nav ul,
 .main-info-section,
@@ -707,5 +768,14 @@ footer p  {
 		letter-spacing: 0px;
 		font-size: 11px;
 		border-width: 1px;
-	}
+    }
+
+    .footer {
+        padding: 15px;
+    }
+    
+    #back-to-top {
+        left: 22.5%;
+        bottom: 125px;
+    }
 }

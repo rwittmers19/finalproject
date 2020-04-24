@@ -8,6 +8,37 @@ spans.forEach(span => span.addEventListener('mouseout', function(event) {
     span.classList.remove('animated','rubberBand');
 }));
 
+const backToTopBtn = document.querySelector("#back-to-top");
+window.addEventListener("scroll", scrollerFunction);
+
+function scrollerFunction() {
+  if(window.pageYOffset > 300) {
+    if(!backToTopBtn.classList.contains("btnEntrance")) {
+      backToTopBtn.classList.remove("btnExit");
+      backToTopBtn.classList.add("btnEntrance");
+      backToTopBtn.style.display = "block";
+    }
+  }
+
+  else {
+    if(backToTopBtn.classList.contains("btnEntrance")) {
+      backToTopBtn.classList.add("btnExit");
+      backToTopBtn.classList.remove("btnEntrance");
+      
+      // Adds delay to allow for exit animation to play
+      setTimeout(function() {
+        backToTopBtn.style.display = "none";
+      }, 250);
+    }
+  }
+}
+
+function backToTop() {
+  window.scrollTo(0, 0);
+}
+
+backToTopBtn.addEventListener("click", backToTop);
+
 // Get each of the skill bars
 const htmlBar = document.querySelector('.bar-html');
 const cssBar = document.querySelector('.bar-css');
@@ -131,45 +162,45 @@ function dateBuilder (d) {
 // Ajax Call for form!
 window.addEventListener("DOMContentLoaded", function() {
 
-    // Get the form elements defined in the form
-    
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
-
-    // Success and Error functions for after the form is submitted
-    
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Thanks!";
-    }
-
-    function error() {
-      status.innerHTML = "One or more of your fields was filled out incorrectly.";
-    }
-
-    // Handle the form submission event
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
+  // Get the form elements defined in the form
   
-  // Helper function for sending an AJAX request
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
+  var form = document.getElementById("my-form");
+  var button = document.getElementById("my-form-button");
+  var status = document.getElementById("my-form-status");
+
+  // Success and Error functions for after the form is submitted
+  
+  function success() {
+    form.reset();
+    button.style = "display: none ";
+    status.innerHTML = "Thanks!";
   }
+
+  function error() {
+    status.innerHTML = "One or more of your fields was filled out incorrectly.";
+  }
+
+  // Handle the form submission event
+
+  form.addEventListener("submit", function(ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+  });
+});
+  
+// Helper function for sending an AJAX request
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+}
