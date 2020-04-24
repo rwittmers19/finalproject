@@ -3,11 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 
 html {
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 #back-to-top {
@@ -779,6 +779,6 @@ footer p  {
     
     #back-to-top {
         left: 0%;
-        margin-left: 25%;
+        margin-left: 50%;
     }
 }
