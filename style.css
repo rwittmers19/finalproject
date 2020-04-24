@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 #back-to-top {
@@ -41,15 +42,17 @@ html {
     animation-name: btnEntrance;
 }
 
-/* Zoom in*/
+/* Zoom up*/
 
 @keyframes btnEntrance {
     from {
         opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
+        transform: translate3d(0, 100%, 0);
     }
+
     to {
         opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -66,7 +69,7 @@ html {
 
     to {
         opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0, 100%, 0);
     }
 }
 
@@ -775,7 +778,7 @@ footer p  {
     }
     
     #back-to-top {
-        left: 22.5%;
-        bottom: 125px;
+        left: 0%;
+        margin-left: 25%;
     }
 }
